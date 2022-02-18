@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+
     <script src="https://kit.fontawesome.com/46e8f80e5d.js" crossorigin="anonymous"></script>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -13,7 +14,7 @@
   <body>
     <div class="navbar-lewagon fixed-top"  data-controller="navbar" data-action="scroll@window->navbar#updateNavbar">
       <div class="logo">
-        <i class="fas fa-popcorn"></i>
+        <i class="fas fa-film"></i>
       </div>
       <div >
         <%= link_to lists_path, class:'button button-search-bar' do %>
@@ -26,5 +27,12 @@
       </div>
     </div>
     <%= yield %>
+    <div class="footer">
+      <i class="fa-brands fa-facebook-square"></i>
+      <i class="fa-brands fa-twitter-square"></i>
+      <i class="fa-brands fa-instagram-square"></i>
+      <i class="fa-brands fa-github-square"></i>
+      <p>Made you with 🤍 by Camille Dauchy</p>
+    </div>
   </body>
 </html>

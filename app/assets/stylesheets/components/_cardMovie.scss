@@ -11,7 +11,7 @@
 .card-style p {
   overflow: hidden;
   line-height: 24px;
-  max-height: 120px;
+  max-height: 100px;
 }
 
 
@@ -26,22 +26,12 @@
   }
 }
 
-.fa-star{
-  color: #FFC600;
+.trash-movie {
+  margin-left: 3px;
 }
 
-.card-list {
-  width: 200px;
-  color: #E900FF;
-  border: 1px solid #E900FF;
-  font-family: 'Bangers', cursive;
-  margin-top: 15px;
-  text-align: center;
-  padding-bottom: 5px;
-  text-decoration: none;
-  &:hover {
-    text-decoration: none;
-  }
+.fa-star{
+  color: #FFC600;
 }
 
 .card-category {
@@ -85,11 +75,5 @@
   &:hover {
     text-decoration: none;
     color: white;
-  }
-}
-
-.pink-none-decoration{
-  &:hover {
-    text-decoration: none;
   }
 }

@@ -19,7 +19,7 @@
 
                 <div>
                   <%= link_to bookmark_path(movie, list_id: @list.id), method: :delete do %>
-                    <i class="fa-solid fa-trash-can"></i>
+                    <i class="fa-solid fa-trash-can trash-movie"></i>
                   <% end %>
                 </div>
               </div>
@@ -49,10 +49,11 @@
         <%end%>
     </div>
 
+
     <div class="add-review">
       <%= simple_form_for [@list, @review] do |f|%>
         <%= f.input :content%>
-        <%= f.input :stars%>
+         <%= f.input :stars, collection: [0,1,2,3,4,5]%>
         <%= f.submit class:'button'%>
       <%end%>
     </div>

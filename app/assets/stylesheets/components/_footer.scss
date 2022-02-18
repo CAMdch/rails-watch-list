@@ -1,0 +1,22 @@
+.footer {
+  background-color: black;
+  height: 200px;
+  text-align: center;
+  margin-top: 50px;
+  p {
+    color: white;
+    margin-top: 15px;
+    opacity: 0.3;
+  }
+  i {
+    margin-top: 60px;
+    color: white;
+    opacity: 0.3;
+    font-size: 45px;
+    transition: 1s;
+    &:hover {
+      transition: 1s;
+      opacity: 1;
+    }
+  }
+}
