@@ -1,0 +1,23 @@
+.reviews {
+  margin: 20px;
+  display: flex;
+  border-top: 1px solid white;
+  padding-top: 10px;
+}
+
+
+.review-content {
+  color: white;
+  width: 50%;
+  h3 {
+    font-family: 'Bangers', cursive;
+  }
+}
+
+.add-review {
+  width: 50%;
+}
+
+.review-details {
+  margin-bottom: 10px;
+}

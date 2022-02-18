@@ -8,7 +8,7 @@
   <h2>My list</h2>
   <div class="row">
     <% @lists.each do |list|%>
-      <%= link_to list_path(list.id) do%>
+      <%= link_to list_path(list.id), class:'pink-none-decoration' do%>
         <div class="col-3">
           <div class="card-list">
             <%= list.name %>

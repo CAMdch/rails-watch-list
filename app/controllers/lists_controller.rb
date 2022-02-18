@@ -22,7 +22,10 @@ class ListsController < ApplicationController
     @movies = @bookmarks.map do |bookmark|
       Movie.find(bookmark[:movie_id])
     end
+    @reviews = @list.reviews
+    @review = Review.new
   end
+
   private
 
   def list_params

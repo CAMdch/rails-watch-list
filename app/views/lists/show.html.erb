@@ -8,7 +8,7 @@
   <div class="row">
     <%@movies.each do |movie|%>
       <div class="col-4">
-        <%= link_to movie_path(movie) do%>
+        <%= link_to movie_path(movie), class:'none-decoration' do%>
           <div class="card card-style">
             <img class="card-img-top" src="<%= movie.poster_url %>" style ="height: 300px; object-fit: cover; object-position: top;">
             <div class="card-body">
@@ -30,6 +30,32 @@
         <%end%>
       </div>
     <%end%>
+  </div>
+
+  <div class="reviews">
+
+    <div class="review-content">
+      <h3>Reviews</h3>
+        <%@reviews.each do |review|%>
+          <div class="review-details">
+            <%= review.content%>
+            <% review.stars.times do %>
+              <i class="fa-solid fa-star"></i>
+            <%end%>
+            <% (5 - review.stars).times do %>
+              <i class="fa-regular fa-star"></i>
+            <%end%>
+          </div>
+        <%end%>
+    </div>
+
+    <div class="add-review">
+      <%= simple_form_for [@list, @review] do |f|%>
+        <%= f.input :content%>
+        <%= f.input :stars%>
+        <%= f.submit class:'button'%>
+      <%end%>
+    </div>
   </div>
 
 
