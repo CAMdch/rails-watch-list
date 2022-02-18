@@ -1,0 +1,19 @@
+// Place all the styles related to the Movies controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.information-movie {
+  display: flex;
+  img {
+    width: 250px;
+    margin-right: 10px;
+  }
+}
+
+.overview  {
+  color: white;
+}
+
+.stars {
+  margin-bottom: 15px;
+}

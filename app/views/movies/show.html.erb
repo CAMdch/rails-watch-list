@@ -1,0 +1,23 @@
+<div class="containerPerso">
+  <h1><%=@movie.title%></h1>
+  <div class="information-movie">
+    <img src="<%=@movie.poster_url%>">
+    <div class="overview">
+      <p>Rating</p>
+      <div class="stars">
+        <% @movie.rating.times do %>
+          <i class="fa-solid fa-star"></i>
+        <%end%>
+
+        <%(10- @movie.rating).times do %>
+          <i class="fa-regular fa-star"></i>
+        <%end%>
+
+      </div>
+
+      <p><strong>Overview</strong></p>
+      <p><%=@movie.overview%></p>
+
+    </div>
+  </div>
+</div>

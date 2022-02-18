@@ -1,0 +1,89 @@
+.card-style {
+  width: 100%;
+  height: 546px;
+  background-color: #09021b;
+  color: white;
+  border: 1px solid #612897;
+  margin-top: 30px;
+  padding-bottom: 5px;
+}
+
+.card-style p {
+  overflow: hidden;
+  line-height: 24px;
+  max-height: 120px;
+}
+
+
+.fa-trash-can {
+  color: #E900FF;
+  opacity: 0.5;
+  transition: 1s;
+  &:hover{
+    opacity: 1;
+    transition: 1s;
+    text-decoration: none;
+  }
+}
+
+.fa-star{
+  color: #FFC600;
+}
+
+.card-list {
+  width: 200px;
+  color: #E900FF;
+  border: 1px solid #E900FF;
+  font-family: 'Bangers', cursive;
+  margin-top: 15px;
+  text-align: center;
+  padding-bottom: 5px;
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.card-category {
+  background-size: cover;
+  background-position: center;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  margin-bottom: 30px;
+  flex-direction: column;
+}
+
+.fa-pen, #trash {
+  color: white;
+  opacity: 0.5;
+  transition: 1s;
+  &:hover {
+    opacity: 1;
+    transition: 1s;
+    text-decoration: none;
+  }
+}
+
+.card-title-information {
+  color: white;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.none-decoration{
+  color:white;
+  &:hover {
+    text-decoration: none;
+    color: white;
+  }
+}

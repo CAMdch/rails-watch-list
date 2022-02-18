@@ -1,0 +1,37 @@
+<div class="containerPerso">
+  <% if @query %>
+    <h1><%= @query %>...</h1>
+  <% else %>
+    <h1>All movies</h1>
+  <% end %>
+
+  <div class="bar-search-add">
+    <form class="search">
+      <input type="text" class="search-bar" name ="query" placeholder="Search..." value = "<%=params[:query]%>">
+      <button class="submit button">Search</button>
+    </form>
+
+    <%= link_to "Add a movie", new_movie_path, class:'button btn-movie'%>
+  </div>
+
+  <div class="row">
+    <%@movies.each do |movie|%>
+      <div class="col-4">
+        <%= link_to movie_path(movie), class:'none-decoration' do%>
+          <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= movie.poster_url%>)">
+            <%= movie.title%>
+            <div class="icon">
+              <%= link_to movie_path(movie), class:'none-decoration', method: :delete do%>
+                <i class="fa-solid fa-trash-can" id= "trash"></i>
+              <%end%>
+              <%= link_to edit_movie_path(movie) do%>
+                <i class="fa-solid fa-pen"></i>
+              <%end%>
+            </div>
+          </div>
+        <%end%>
+      </div>
+    <%end%>
+  </div>
+
+</div>

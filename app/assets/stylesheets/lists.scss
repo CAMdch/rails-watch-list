@@ -1,0 +1,28 @@
+// Place all the styles related to the Lists controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+body {
+  background-color: #09021b;
+}
+
+h1 {
+  font-family: 'Bangers', cursive;
+  font-size: 100px;
+  color: white;
+}
+
+h2 {
+  color: #E900FF;
+  font-family: 'Bangers', cursive;
+  border: 1px solid #E900FF;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: 50px;
+}
+
+.containerPerso {
+  padding: 10px;
+  margin: 10px auto;
+  width: 1000px;
+}

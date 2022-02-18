@@ -1,0 +1,36 @@
+<div class="containerPerso">
+  <h1><%= @list.name %></h1>
+
+  <%= link_to new_list_bookmark_path(@list), class:'button' do %>
+    Add a movie
+  <% end %>
+
+  <div class="row">
+    <%@movies.each do |movie|%>
+      <div class="col-4">
+        <%= link_to movie_path(movie) do%>
+          <div class="card card-style">
+            <img class="card-img-top" src="<%= movie.poster_url %>" style ="height: 300px; object-fit: cover; object-position: top;">
+            <div class="card-body">
+              <div class="card-title d-flex justify-content-between">
+                <div class ="card-title-information">
+                  <strong><%= movie.title %></strong> . <%= movie.rating %> <i class="fa-solid fa-star"></i>
+                </div>
+
+                <div>
+                  <%= link_to bookmark_path(movie, list_id: @list.id), method: :delete do %>
+                    <i class="fa-solid fa-trash-can"></i>
+                  <% end %>
+                </div>
+              </div>
+              <p class="card-text"><%= movie.overview %></p>
+              <p><i class="fa-solid fa-quote-right"></i> <%=movie.bookmarks.find_by(list_id: @list).comment%></p>
+            </div>
+          </div>
+        <%end%>
+      </div>
+    <%end%>
+  </div>
+
+
+</div>
