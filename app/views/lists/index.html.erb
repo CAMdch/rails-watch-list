@@ -10,7 +10,7 @@
     <% @lists.each do |list|%>
       <%= link_to list_path(list.id), class:'pink-none-decoration' do%>
         <div class="col-3">
-          <div class="card-list" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOAAAADhCAMAAADmr0l2AAAANlBMVEUAAAABAQH///98fHy8vLzy8vLMzMzv7+8HBwe5ubn7+/vk5OT4+PjGxsZvb292dnYNDQ2tra3Gpq47AAABU0lEQVR4nO3Ri03DQABEwYv52A6EhP6bxQRaiKJ3mqlgn3acz8vUxnn5WN/mtK7r5zKWy5jY1xH4PrZnz3iUbVzvgeN0ePaYx3iZO/AkME5gncA6gXUC6wTWCawTWCewTmCdwDqBdQLrBNYJrBNYJ7BOYJ3AOoF1AusE1gmsE1gnsE5gncA6gXUC6wTWCawTWCewTmCdwDqBdQLrBNYJrBNYJ7BOYJ3AOoF1AusE1gmsE1gnsE5gncA6gXUC6wTWCawTWCewTmCdwDqBdQLrBNYJrBNYJ7BOYJ3AOoF1AusE1gmsE1gnsE5gncA6gXUC6wTWCawTWCewTmCdwDqBdQLrBNYJrBNYJ7BOYJ3AOoF1AusE1gmsE1gnsE5gncA6gXUC6wTWCawTWCewTmCdwLq/wMvYTlM6uv4fvI1nb3mQbVzvD07sN3D93l8nte+XI3ByP1LcHUNM13aeAAAAAElFTkSuQmCC')">
+          <div class="card-list" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= list.photo.attached? ? cl_image_path(list.photo.key) : asset_path('https://images.unsplash.com/photo-1549317336-206569e8475c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80') %>)">
             <div class="list-title">
               <%= list.name %>
             </div>
