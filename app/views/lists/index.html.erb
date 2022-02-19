@@ -12,7 +12,7 @@
   <div class="row">
     <% @lists.each do |list|%>
       <%= link_to list_path(list.id), class:'pink-none-decoration' do%>
-        <div class="col-3">
+        <div class="col-lg-3 col-sm-12">
           <div class="card-list" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= list.photo.attached? ? cl_image_path(list.photo.key) : asset_path('https://images.unsplash.com/photo-1549317336-206569e8475c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80') %>)">
             <div class="list-title">
               <%= list.name %>

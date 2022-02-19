@@ -6,15 +6,35 @@
   background-color: transparent;
   border: 1px solid white;
   border-radius: 4px;
-  height: 40px;
-  width: 700px;
   color: white;
 }
 
 .submit {
   background-color: transparent;
-  height: 40px;
-  width: 125px;
   margin-left: 7px;
+}
 
+@media screen and (max-width: 2000px) {
+  .search-bar {
+    height: 40px;
+    width: 700px;
+  }
+
+  .submit {
+    height: 40px;
+    width: 125px;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .search-bar {
+    height: 40px;
+    width: 200px;
+  }
+
+  .submit {
+    height: 40px;
+    width: 70px;
+    margin-right: 7px;
+  }
 }

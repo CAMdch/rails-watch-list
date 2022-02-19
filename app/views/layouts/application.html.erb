@@ -12,20 +12,25 @@
   </head>
 
   <body>
-    <div class="navbar-lewagon fixed-top"  data-controller="navbar" data-action="scroll@window->navbar#updateNavbar">
-      <div class="logo">
-        <i class="fas fa-film"></i>
-      </div>
-      <div >
-        <%= link_to lists_path, class:'button button-search-bar' do %>
-          My lists
-        <% end %>
+   <div class="row">
+    <div class="col-12">
+      <div class="navbar-lewagon fixed-top"  data-controller="navbar" data-action="scroll@window->navbar#updateNavbar">
+        <div class="logo">
+          <i class="fas fa-film"></i>
+        </div>
+        <div >
+          <%= link_to lists_path, class:'button button-search-bar' do %>
+            My lists
+          <% end %>
 
-        <%= link_to movies_path, class:'button button-search-bar' do %>
-          All movies
-        <% end %>
+          <%= link_to movies_path, class:'button button-search-bar' do %>
+            All movies
+          <% end %>
+        </div>
       </div>
+
     </div>
+   </div>
     <%= yield %>
     <div class="footer">
       <i class="fa-brands fa-facebook-square"></i>

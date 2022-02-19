@@ -1,8 +1,6 @@
 .card-list {
   background-size: cover;
   background-position: center;
-  height: 150px;
-  width: 222px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -30,5 +28,20 @@
   &:hover {
     color: #E900FF;
     text-decoration: none;
+  }
+}
+
+
+@media screen and (max-width: 2000px) {
+  .card-list {
+    height: 150px;
+    width: 222px;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .card-list {
+    height: 100px;
+    width: 355px;
   }
 }

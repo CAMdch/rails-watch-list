@@ -16,7 +16,7 @@
 
   <div class="row">
     <%@movies.each do |movie|%>
-      <div class="col-4">
+      <div class="col-lg-4 col-sm-12">
         <%= link_to movie_path(movie), class:'none-decoration' do%>
           <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= movie.poster_url%>)">
             <%= movie.title%>
