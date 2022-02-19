@@ -24,7 +24,7 @@
                 </div>
               </div>
               <p class="card-text"><%= movie.overview %></p>
-              <p><i class="fa-solid fa-quote-right"></i> <%=movie.bookmarks.find_by(list_id: @list).comment%></p>
+              <p class = "movie-comments"><i class="fa-solid fa-quote-right"></i> <%=movie.bookmarks.find_by(list_id: @list).comment%></p>
             </div>
           </div>
         <%end%>

@@ -6,7 +6,9 @@ class ReviewsController < ApplicationController
     if @review.save
       redirect_to list_path(@list)
     else
-      render :new
+      @movies = @list.movies
+      @reviews = @list.reviews
+      render 'lists/show'
     end
   end
 
