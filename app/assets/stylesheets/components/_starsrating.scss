@@ -1,0 +1,26 @@
+
+.rating-css {
+  width: 200px;
+}
+.rating-css div {
+  color: #ffe400;
+  text-align: center;
+  padding: 20px 0;
+  display: flex;
+}
+.rating-css input {
+  display: none;
+}
+.rating-css input + label {
+  font-size: 20px;
+  text-shadow: 0 0 0 #ffe400;
+  cursor: pointer;
+  border: none;
+}
+.rating-css input:checked + label ~ label {
+  color: #838383;
+}
+.rating-css label:active {
+  transform: scale(0.8);
+  transition: 0.3s ease;
+}
